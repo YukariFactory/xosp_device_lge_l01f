@@ -1,14 +1,20 @@
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit some common XOSP stuff.
+$(call inherit-product, vendor/xosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/xosp/config/xosp.mk)
+
+# Boot animation configuration
+TARGET_SCREEN_HEIGHT := 1920
+TARGET_SCREEN_WIDTH := 1080
+TARGET_BOOTANIMATION_HALF_RES := true
 
 # Inherit device configuration
 $(call inherit-product, device/lge/l01f/l01f.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := l01f
-PRODUCT_NAME := cm_l01f
+PRODUCT_NAME := xosp_l01f
 PRODUCT_BRAND := LGE
-PRODUCT_MODEL := LG-L01F
+PRODUCT_MODEL := L-01F
 PRODUCT_MANUFACTURER := lge
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
